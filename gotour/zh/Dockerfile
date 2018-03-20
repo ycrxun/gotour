@@ -3,8 +3,10 @@ RUN apk add --no-cache git && go get -u github.com/Go-zh/tour/gotour
 
 FROM alpine
 
-COPY --from=build /usr/local/bin/gotour /usr/local/bin/gotour
+COPY --from=build /go /go
+
+ENV GOPATH=/go
 
 EXPOSE 8080
 
-CMD ["/usr/local/bin/gotour", "-http", "0.0.0.0:8080"]
+CMD ["/go/bin/gotour", "-http", "0.0.0.0:8080"]
