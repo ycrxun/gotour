@@ -13,4 +13,4 @@ ENV GOROOT=/user/local/go
 
 EXPOSE 8080
 
-CMD [ "/go/bin/golangdoc", "-http=:6060", "-lang=zh_CN" ]
+CMD [ "/go/bin/golangdoc", "-http=:8080", "-lang=zh_CN" ]
