@@ -1,7 +1,7 @@
 FROM golang:1.9-alpine AS build
 RUN apk add --no-cache git && \
 go get github.com/golang-china/golangdoc && \
-git clone --depth=1 https://github.com/golang-china/golangdoc.translations /user/local/go/translations
+git clone --depth=1 https://github.com/golang-china/golangdoc.translations /usr/local/go/translations
 
 FROM alpine
 
