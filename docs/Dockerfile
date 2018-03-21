@@ -6,7 +6,7 @@ git clone --depth=1 https://github.com/golang-china/golangdoc.translations /user
 FROM alpine
 
 COPY --from=build /go /go
-COPY --from=build /user/local/go /user/local/go
+COPY --from=build /usr/local/go /usr/local/go
 
 ENV GOPATH=/go
 ENV GOROOT=/user/local/go
