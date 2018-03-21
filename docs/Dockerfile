@@ -9,7 +9,7 @@ COPY --from=build /go /go
 COPY --from=build /usr/local/go /usr/local/go
 
 ENV GOPATH=/go
-ENV GOROOT=/user/local/go
+ENV GOROOT=/usr/local/go
 
 EXPOSE 8080
 
